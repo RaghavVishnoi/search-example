@@ -1,0 +1,5 @@
+<div style="margin-top: 200px;">
+	<%= form_with url: search_path, local: true, method: :get, html: { class: "search" } do |form| %>
+	  <%= form.text_field :q, placeholder: "Search", data: { behavior: "autocomplete" }, class: "searchTerm" %>
+	<% end %>
+</div>	
