@@ -10,20 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170606172146) do
+ActiveRecord::Schema.define(version: 20171121183315) do
 
-  create_table "directors", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
-  create_table "movies", force: :cascade do |t|
-    t.integer "director_id"
+  create_table "files", force: :cascade do |t|
     t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["director_id"], name: "index_movies_on_director_id"
+    t.string "employee_id"
+    t.datetime "created_on"
+    t.string "size"
+    t.string "title"
+    t.string "created_by"
+    t.text "description"
+    t.index ["employee_id"], name: "index_files_on_employee_id"
+    t.index ["name"], name: "index_files_on_name"
   end
 
 end

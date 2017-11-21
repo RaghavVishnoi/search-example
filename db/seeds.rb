@@ -6,10 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-movies = ["A Cure for Wellness", "Split", "Sing", "Suicide Squad", "The Great Wall", "Hacksaw Ridge", "Fantastic Beasts and Where to Find Them", "Moana", "La La Land", "Colossal", "Doctor Strange", "Batman v Superman: Dawn of Justice", "Rogue One", "Hidden Figures", "Passengers", "The Exception", "Lion", "X-Men: Apocalypse", "Moonlight", "Trolls", "The Lost City of Z", "Deadpool", "Storks", "Arrival", "Raw", "The Secret Life of Pets", "Me Before You", "Free Fire", "Manchester by the Sea", "The Magnificent Seven", "Nocturnal Animals", "Captain America: Civil War", "Why Him?", "Bad Moms", "Sausage Party", "Assassin's Creed", "Ice Age: Collision Course", "Gold", "Star Trek Beyond", "Resident Evil: The Final Chapter", "Jason Bourne", "Deepwater Horizon", "The Legend of Tarzan", "Independence Day: Resurgence", "The Girl on the Train", "Zootopia", "The Bad Batch", "The Founder", "Underworld: Blood Wars", "The Accountant"]
-directors = ["Gore Verbinski", "M. Night Shyamalan", "Christophe Lourdelet", "David Ayer", "Yimou Zhang", "Mel Gibson", "David Yates", "Ron Clements", "Damien Chazelle", "Nacho Vigalondo", "Scott Derrickson", "Zack Snyder", "Gareth Edwards", "Theodore Melfi", "Morten Tyldum", "David Leveaux", "Garth Davis", "Bryan Singer", "Barry Jenkins", "Walt Dohrn", "James Gray", "Tim Miller", "Nicholas Stoller", "Denis Villeneuve", "Julia Ducournau", "Chris Renaud", "Thea Sharrock", "Ben Wheatley", "Kenneth Lonergan", "Antoine Fuqua", "Tom Ford", "Anthony Russo", "John Hamburg", "Jon Lucas", "Greg Tiernan", "Justin Kurzel", "Mike Thurmeier", "Stephen Gaghan", "Justin Lin", "Paul W.S. Anderson", "Paul Greengrass", "Peter Berg", "David Yates", "Roland Emmerich", "Tate Taylor", "Byron Howard", "Ana Lily Amirpour", "John Lee Hancock", "Anna Foerster", "Gavin O'Connor"]
-
-movies.zip(directors).each do |movie, director|
-  d = Director.where(name: director).first_or_create
-  d.movies.where(name: movie).first_or_create
-end
+    FileData.create([
+    	{name: 'TestFile1',employee_id: 'Emp1',created_on: '2017-11-10',size: '3MB',title: 'TestTitle1',created_by: 'TestCreator1',description: 'TestDesc1'},
+    	{name: 'TestFile2',employee_id: 'Emp2',created_on: '2017-11-11',size: '4MB',title: 'TestTitle2',created_by: 'TestCreator2',description: 'TestDesc2'},
+    	{name: 'TestFile3',employee_id: 'Emp3',created_on: '2017-11-12',size: '5MB',title: 'TestTitle3',created_by: 'TestCreator3',description: 'TestDesc3'},
+    	{name: 'TestFile4',employee_id: 'Emp4',created_on: '2017-11-13',size: '6MB',title: 'TestTitle4',created_by: 'TestCreator4',description: 'TestDesc4'},
+    	{name: 'TestFile5',employee_id: 'Emp5',created_on: '2017-11-14',size: '7MB',title: 'TestTitle5',created_by: 'TestCreator5',description: 'TestDesc5'},
+    ])

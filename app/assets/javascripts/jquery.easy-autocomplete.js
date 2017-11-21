@@ -658,7 +658,7 @@ var EasyAutocomplete = (function(scope) {
 		}
 
 		function reduceElementsInList(list) {
-			if (listBuilder.maxNumberOfElements !== undefined && list.length > listBuilder.maxNumberOfElements) {
+			if (listBuilder.maxNumberOfElements !== undefined) {
 				list = list.slice(0, listBuilder.maxNumberOfElements);
 			}
 
