@@ -9,6 +9,7 @@ class FilesController < ApplicationController
   # GET /movies/1
   # GET /movies/1.json
   def show
+    session[:file_id] = params[:id]
     @file = FileData.find(params[:id])
   end
 

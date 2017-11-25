@@ -1,0 +1,8 @@
+#loginbox{
+	border: 1px solid #ccc;
+	margin: auto;
+	margin-top: 100px;
+}
+.panel-header{margin-left: 40%;margin-top: 25px;}
+.panel-body{padding-top: 30px;}
+.panel-body .input-group{margin-bottom: 25px}

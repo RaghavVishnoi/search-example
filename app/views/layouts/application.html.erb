@@ -7,12 +7,14 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   </head>
 
   <body>
-
-    <%= render partial: "layouts/navbar" %>
-  
+    <%= render partial: "layouts/navheader" %>
+    <%if session[:file_id].present?%>
+      <%= render partial: "layouts/sidenav" %>
+    <%end%>  
     <div class="container">
       <%= yield %>
     </div>

@@ -1,0 +1,19 @@
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+  <div class="col-sm-10">
+	  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <a class="navbar-brand" href="#">Files Logo</a>
+  </div>
+  <%if current_user.present?%>
+	  <div class="col-sm-2">
+	  	<a href="/users/sign_out" data-method="delete">
+		  	<button type="button" class="btn btn-default btn-sm">
+		      <i class="fa fa-sign-out" aria-hidden="true"></i>
+		 		Log out
+		    </button>
+		</a>    
+	  </div>
+  <%end%>	  	  
+</nav>
+
